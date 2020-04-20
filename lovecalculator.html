@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>love calculator </title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<!-- <link rel="stylesheet" type="text/css" href="css\trial.css"> -->
+
+</head>
+<body>
+<h1 class="text-center text-gray-dark">This Project Made By ANSARI AASIF</h1>
+<header>
+	<div class="card  text-center w-50 m-auto">
+		<div class="card-header bg-danger text-white">LOVE CALCULATOR</div>
+		<div class="card-body">
+			<form class="form-inline m-auto w-75">
+				<div class="form-group">
+					<input type="text" name="" class="form-control text-center"  placeholder="Your Name" id="urname">
+					
+				</div>
+				<div>
+					<span class="pl-4 pr-4">+</span>
+				</div>
+				<div class="form-group">
+					<input type="text" name=""class="form-control text-center"  placeholder="Love Name" id="lname">
+					
+				</div>
+			</form>
+			<br>
+			<div class="w-75 m-auto">
+				<button class="btn btn-success w-50" onclick="lovecal()"> Done</button>
+			</div>
+			<br>
+			<div>
+				<input type="text" name="" placeholder="Love Percentage" class="text-center form-control w-25 m-auto" id="lovevalue"  >
+			</div>
+
+		</div>
+		<div class="card-footer">God Bless To Your Relationship</div>
+		
+	</div>
+</header>
+
+<script >
+	function lovecal(){
+
+		var name=document.getElementById('urname').value;
+		var lname=document.getElementById("lname").value;
+		
+		 if (name=="") {
+			alert("pls enter your name");
+		}
+		
+		else if (name.length<=2) {
+			alert("your name is too short");
+		} else if (!isNaN(name)) {
+			alert("numbers are not allowed!!");
+		} 
+		else if (lname=="") {
+			alert("pls enter your love name");
+		}
+		
+		else if (lname.length<=2) {
+			alert("love name is too short");
+		} else if (!isNaN(lname)) {
+			alert("numbers are not allowed!!");
+		} 
+
+		else{
+
+			var lovedata=Math.random()*100;
+		lovedata=Math.floor(lovedata);
+		document.getElementById("lovevalue" ).value=lovedata + "%";	
+		}
+
+		
+	}
+
+
+	
+</script>
+
+		
+
+
+
+<!-- <h1>welcome to ansari tech website :) keep smilling and keep loving :) </h1>
+	<button onclick="myfunc()">jstrial</button>
+	<p id="demo"></p>
+		<script >
+			var name=prompt("enter ur name");
+			
+			/*function myfunc() {
+				// body... 
+				var name=prompt("pls enter ur name"," assif ansari");
+				if (name!=null) {
+					document.getElementById('demo').innerHTML="hello"+name+"how are u today"???;
+				}*/
+			document.write("welcome "+name+" to our website");
+		</script>
+	 -->	
+
+</body>
+</html>
